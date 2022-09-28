@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #ter {
+            width: 100%;
+        }
+        #canvas {
+            width: 40%;
+            float: center;
+        }
+        #szamolas {
+            width: 40%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>háromszög generátor éáááá</h1>
+    
+    <div id="ter">
+        <div id="szamolas">
+            <p>a oldal:</p>
+            <input id="a" class="oldal" type="number"><br>
+            <p>b oldal:</p>
+            <input id="b" class="oldal" type="number"><br>
+            <p>c oldal:</p>
+            <input id="c" class="oldal" type="number"><br>
+            <p>alpha szög:</p>
+            <input id="alpha" class="szog" type="number"><br>
+            <p>beta szög:</p>
+            <input id="beta" class="szog" type="number"><br>
+            <p>gamma szög:</p>
+            <input id="gamma" class="szog" type="number">
+            <button onclick="Main()">Számol!</button>
+            <p id="eredmeny"></p>
+        </div>
+
+        <canvas id="canvas" height="500" width="500">
+        </canvas>
+    </div>
+
+    <script src="triangle.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess2</title>
+    <link rel="stylesheet" href="galery.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div id="main">
+
+        <table class="center maintable">
+            <tr>
+                <td class="felsotd" class="bal"></td>
+                <td class="felsotd" class="jobb"></td>
+            </tr>
+            <tr>
+                <td class="alsotd" class="bal">
+                    <div class="s1">
+                        <h2 class="s2">You can read the ★rules here➜</h2>
+                        <h2 class="s2">And watch the original concept here➜</h2>
+                        <div class="container">
+                            <div class="image-container">
+                                <div class="image"><img class="ig" src="rulez.png" alt=""></div>
+                                <div class="image"><a href="https://www.youtube.com/watch?v=mcivL8u176Y&t=3s" target=”_blank”><img src="thumb.png" alt=""></a></div>
+                            </div>
+                        
+                            <div class="popimage">
+                                <span>&times;</span>
+                                <img src="rulez.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="jobb"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        document.querySelector('.popimage').style.display = 'none';
+        
+        document.querySelectorAll('.image-container .ig').forEach(image => {
+            image.onclick = () =>{
+                document.querySelector('.popimage').style.display = 'block';
+                document.querySelector('.popimage .ig').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popimage span').onclick = () =>{
+            document.querySelector('.popimage').style.display = 'none';
+        }
+    </script>
+
+    
+</body>
+</html>

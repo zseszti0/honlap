@@ -1,0 +1,66 @@
+#szoveg {
+    position: absolute;
+    bottom: 25%;
+    left: 18%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10pt;
+}
+body {
+    background-color: rgb(59, 59, 59);
+}
+
+.maintable{
+    width: 1158px;
+    max-height: 706px;
+    background-image: url("welcome.png");
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bal {
+    width: 700px;
+}
+.jobb {
+    width: 558px;
+}
+
+.felsotd {
+    height: 300px;
+}
+
+.alsotd{
+    max-height: 506px;
+    text-align: left;
+    padding-left: 90px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.s1 {
+    margin-top: 20px;
+    width: 608px;
+}
+.s2 {
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 5px;
+    width: 70%;
+    float: left;
+    font-weight: 600;
+    background:rgb(51, 51, 51);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
+    color: rgb(194, 194, 194);
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
