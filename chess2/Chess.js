@@ -577,12 +577,12 @@ document.querySelectorAll('.box').forEach(item => {
         if (tog % 2 !== 0) {
             document.getElementById('togw').style.color = 'white'
             document.getElementById('togb').style.color = 'rgb(75, 75, 75)'
-            whosTurn('W')
+            whosTurn('w')
         }
         if (tog % 2 == 0) {
             document.getElementById('togb').style.color = 'black'
             document.getElementById('togw').style.color = 'rgb(75, 75, 75)'
-            whosTurn('B')
+            whosTurn('b')
         }
 
 
@@ -594,7 +594,7 @@ document.querySelectorAll('.box').forEach(item => {
 
 
         document.querySelectorAll('.box').forEach(win => {
-            if (win.innerText == 'Wking' || win.innerText == 'Bking') {
+            if (win.innerText == 'wking' || win.innerText == 'bking') {
                 numOfKings += 1
             }
 
