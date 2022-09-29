@@ -5,7 +5,7 @@ function insertImage() {
     document.querySelectorAll('.box').forEach(image => {
 
         if (image.innerText.length !== 0) {
-            if (image.innerText == 'wfish' || image.innerText == 'bfish') {
+            if (image.innerText == 'wpan' || image.innerText == 'bpan') {
                 image.innerHTML = `${image.innerText} <img class='allimg allfish' src="${image.innerText}.png" alt="">`
                 image.style.cursor = 'pointer'
 
@@ -19,11 +19,6 @@ function insertImage() {
         }
     })
 }
-
-
-
-
-
 
 //Coloring
 
