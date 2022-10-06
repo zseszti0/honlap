@@ -1,4 +1,6 @@
-
+body {
+    background-image: url("bc.png");
+}
 
 #header {
     width: 95%;
@@ -21,12 +23,12 @@
     height: 90px;
 }
 
-#ilt {
+.ilt {
     width:80%;
     padding-bottom: 900px;
 }
 
-#iltdesc {
+.iltdesc {
     padding-left: 5%;
     border-right-width:2px;
     border-right-style:solid;
@@ -35,33 +37,17 @@
     width:50%;
     float:left;
 }
-#iltmore {
+.iltmore {
     width:30%;
     float:right;
     text-align: left;
     padding: 50px 0;
 }
 
-#chess2 {
-    width:80%;
-    padding-bottom: 900px;
-}
-
-#chess2desc {
-    padding-left: 5%;
-    border-right-width:2px;
-    border-right-style:solid;
-    border-right-color:black;
-    padding-right: 5%;
-    width:50%;
-    float:left;
-}
-#chess2more {
-    width:30%;
-    float:right;
-    text-align: left;
-    padding: 50px 0;
-}
 p {
     text-align: justify;
+}
+
+.logo {
+    width: 500px;
 }
