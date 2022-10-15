@@ -1,19 +1,35 @@
 
 
 * {
-    font-family: 'Tahoma';
+    font-family: 'Montserrat', monospace;
+    
 }
 
-body {
-    background-image: url("bc.png");
+h1, h2 {
+    font-size: x-large;
 }
+p {
+    font-size: medium;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 
 #header {
-    width: 95%;
-    height: 300px;
+    width: 88vw;
+    height: 39vh;
     margin-left: auto;
     margin-right: auto;
-    background-image: url("header.png");
+    background: url("header.png");
 }
 
 .szoveg {
@@ -34,105 +50,114 @@ body {
 
 .bal {
     width: 50%;
-    float: left;
-    padding-left: 30px;
+    margin: auto;
+    padding-left: 3vw;
 }
 #more {
-    margin-top: 70px;
-    animation: fadeIn 1s;
+    animation: fadeIn 0.8s;
     animation-fill-mode: forwards; 
     animation-delay:block;
     animation-timing-function: ease-out;
+    text-align: center;
 }
 #more2 {
-    margin-top: 70px;
-    animation: fadeIn 1s;
+    animation: fadeIn 0.8s;
     animation-fill-mode: forwards; 
     animation-delay:block;
     animation-timing-function: ease-out;
+    text-align: center;
 }
 #more3 {
-    margin-top: 70px;
-    animation: fadeIn 1s;
+    animation: fadeIn 0.8s;
     animation-fill-mode: forwards; 
     animation-delay:block;
     animation-timing-function: ease-out;
+    text-align: center;
 }
+
 
 #iltlogo {
     animation-name: logoa;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
+    width: 40vw;
 }
 #chesslogo {
     animation-name: logoa;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
+    width: 40vw;
 }
 #hgenlogo {
     animation-name: logoa;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
+    width: 40vw;
 }
 @keyframes logoa {
     from {
-        width: 0px;
-        height: 100%;
+        opacity: .2;
+
+
     }
     to {
-        width: 550px;
-        height: 100%;
+        opacity: 1;
+
     }
+}
+
+.desc {
+    padding-left: 3vw;
 }
 
 #desc1 {
     animation-name: kozepvonal;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
 }
 
 #desc2 {
     animation-name: kozepvonal;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
 }
 
 #desc3 {
     animation-name: kozepvonal;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
 }
 @keyframes kozepvonal {
     from {
         opacity: 0.2;
-        border-right: 2px solid black;
+        border-right: 2px solid rgb(235, 164, 68);
+        border-left: 2px solid rgb(235, 164, 68);
         line-height: 0%;
     }
     to {
         opacity: 1;
         border-right: 2px solid black;
+        border-left: 2px solid black;
         line-height: 100%;
     }
 }
 
 .ph {
-    height: 900px;
+    height: 120vh;
 }
 
 p {
     text-align: justify;
-    padding-right: 20px;
+    padding-right: 3vw;
 }
 
-.logo {
-    width: 500px;
-}
+
 
 .cim {
     
@@ -144,7 +169,7 @@ p {
 
 @keyframes underlinecim {
     from {
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid rgb(235, 164, 68);
         bottom: 0;
         top: 0;
         width: 0%;}
@@ -173,42 +198,67 @@ p {
     }
   }
 
+  td {
+    text-align: center;
+  }
+
   .dropimg {
     height: 30px;
   }
 
   .dropbtn {
-    background-color: #51aa95;
+    background-color: rgba(236, 177, 87, 0.8);
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
-    width: 100px;
+    width: 10vw;
+    height: 7vh;
+    margin: 20px;
   }
-  
+  .dropbtn2 {
+    background-color: rgba(236, 177, 87, 0.8);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 10vw;
+    height: 7vh;
+    margin: 20px;
+
+    
+  }
+
+  .dropbtn2:hover {
+    background-color: rgb(236, 177, 87);
+  }
+
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
-    padding-bottom: 200px;
-    padding-left: 20px;
+    padding-bottom:120px;
+    
   }
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #c9e0fb;
+    background-color: #faf6ea;
     min-width: 160px;
-    box-shadow: 2px 2px 1px 2px #0e2d23;
+    box-shadow: 2px 2px 1px 2px rgba(45, 114, 106, .8);
     z-index: 1;
     border-radius: 10px;
     animation: dropd 0.2s;
     animation-fill-mode: forwards; 
     animation-delay:block;
     animation-timing-function: ease-out;
+    text-align: left;
     
   }
 
@@ -238,4 +288,6 @@ p {
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #368a6f;}
+  .dropdown:hover .dropbtn {background-color: rgb(236, 177, 87);}
+
+

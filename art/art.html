@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="art.css">
+    <link href="https://https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
+    <title>My Art</title>
+
+    <style>
+        body {
+            background-color: rgb(201, 231, 248);
+        }
+        table {
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin-top: 15vh;
+            font-size: 80pt;
+            text-align: center;
+            margin-bottom: 10vh;
+        }
+        
+        td {
+            font-size: x-large;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        * {
+            font-family: 'Montserrat', monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1><u><span>&nbsp</span><span>&nbsp</span>Art Gallery<span>&nbsp</span><span>&nbsp</span></u></h1>
+  
+    <div class="container">
+        <div class="image-container">
+            <div class="image"><img  src="Kamisato_Ayato.png" alt="" title="Creation date: 24/April/2022"></div>
+            <div class="image"><img  src="Space_Ishtar.png" alt="" title="Creation date: 09/Octber/2022"></div>
+            <div class="image"><img  src="Nilou.png" alt="" title="Creation date: 18/September/2021"></div>
+            <div class="image"><img  src="Tohsaka_Rin.png" alt="" title="Creation date: 30/December/2021"></div>
+            <div class="image"><img  src="Sangonomiya_Kokomi.png" alt="" title="Creation date: 15/May/2022"></div>
+            <div class="image"><img  src="Nakano_Nino.png" alt="" title="Creation date: 05/September/2021"></div>
+            <div class="image"><img  src="Koyanskaya_of_Darkness.png" alt="" title="Creation date: 31/January/2022"></div>
+            <div class="image"><img  src="Sei_Shonagon.png" alt="" title="Creation date: 14/JFebruary/2022"></div>
+            <div class="image"><img  src="Astolfo.png" alt="" title="Creation date: 09/Octber/2021"></div>
+        </div>
+    
+        <div class="popimage">
+            <span>&times;</span>
+            <img  src="" alt="">
+            <table id="desc">
+                <tr>
+                    <td style="padding-top: 20px;"><b>Character name:</b></td>
+                </tr>
+                <tr>
+                    <td id="name"></td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 20px;"><b>Character origin:</b></td>
+                </tr>
+                <tr>
+                    <td id="origin" style="padding-bottom: 20px;"></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <div style="margin-left: 5vw; margin-bottom: 5vh;">
+    <p>_______________________</p>
+    <p><u><b>Credits:</b></u></p><br>
+    <p><a href="https://www.geeksforgeeks.org/how-to-find-an-average-color-of-an-image-using-javascript/">averageColor function</a></p>
+    </div>
+    
+    <script>
+
+        Genshin= ["Kamisato_Ayato","Nilou","Sangonomiya_Kokomi"]
+        Fgo = ["Space_Ishtar", "Koyanskaya_of_Darkness", "Sei_Shonagon", "Astolfo"]
+        Fsn = ["Tohsaka_Rin"]
+        Gotobun = ["Nakano_Nino"]
+
+        Cname = document.querySelector("#name");
+        origin = document.querySelector("#origin");
+
+        document.querySelector('.popimage').style.display = 'none';
+        
+        document.querySelectorAll('.image-container img').forEach(image => {
+            image.onclick = () =>{
+
+                filnam = (image.getAttribute('src')).replace('.png', "")
+
+                document.querySelector('.popimage').style.display = 'block';
+                document.querySelector('.popimage img').src = (filnam+ 'F.png');
+                Cname.innerHTML = (filnam).replace('_'," ")
+
+                if (Genshin.includes(filnam))
+                    origin.innerHTML = "Genshin Impact"
+                if (Fgo.includes(filnam))
+                    origin.innerHTML = "Fate/Grand Order"
+                if (Fsn.includes(filnam))
+                    origin.innerHTML = "Fate/Stay Night"
+                if (Gotobun.includes(filnam))
+                    origin.innerHTML = "5-toubun no Hanayome"
+                
+                rgb = averageColor(image)
+
+                document.querySelector("#desc").style.backgroundColor = 'rgb(' + rgb.r + ','+ rgb.g + ','+ rgb.b + ')';
+                
+            }
+        });
+
+        document.querySelector('.popimage span').onclick = () =>{
+            document.querySelector('.popimage').style.display = 'none';
+        }
+
+        //rgb
+            function averageColor(imageElement) {
+
+            // Create the canvas element
+            var canvas
+                = document.createElement('canvas'),
+
+                // Get the 2D context of the canvas
+                context
+                    = canvas.getContext &&
+                    canvas.getContext('2d'),
+                imgData, width, height,
+                length,
+
+                // Define variables for storing
+                // the individual red, blue and
+                // green colors
+                rgb = { r: 0, g: 0, b: 0 },
+
+                // Define variable for the
+                // total number of colors
+                count = 0;
+
+            // Set the height and width equal
+            // to that of the canvas and the image
+            height = canvas.height =
+                imageElement.naturalHeight ||
+                imageElement.offsetHeight ||
+                imageElement.height;
+            width = canvas.width =
+                imageElement.naturalWidth ||
+                imageElement.offsetWidth ||
+                imageElement.width;
+
+            // Draw the image to the canvas
+            context.drawImage(imageElement, 0, 0);
+
+            // Get the data of the image
+            imgData = context.getImageData(
+                        0, 0, width, height);
+
+            // Get the length of image data object
+            length = imgData.data.length;
+
+            for (var i = 0; i < length; i += 4) {
+
+                // Sum all values of red colour
+                rgb.r += imgData.data[i];
+
+                // Sum all values of green colour
+                rgb.g += imgData.data[i + 1];
+
+                // Sum all values of blue colour
+                rgb.b += imgData.data[i + 2];
+
+                // Increment the total number of
+                // values of rgb colours
+                count++;
+            }
+
+            // Find the average of red
+            rgb.r
+                = Math.floor(rgb.r / count);
+
+            // Find the average of green
+            rgb.g
+                = Math.floor(rgb.g / count);
+
+            // Find the average of blue
+            rgb.b
+                = Math.floor(rgb.b / count);
+
+            return rgb;
+            }
+    </script>
+</body>
+</html>
