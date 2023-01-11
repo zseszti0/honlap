@@ -363,7 +363,6 @@ function Main()
 {
     Send()
     SineLaw()
-    window.open("https://www.bet365.com/olp/open-account?affiliate=365_01023649&rdk=rk4")
 }
 
 

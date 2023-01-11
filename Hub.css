@@ -29,7 +29,8 @@ p {
     height: 39vh;
     margin-left: auto;
     margin-right: auto;
-    background: url("header.png");
+    background: url("header.png") no-repeat;
+    background-position: center;
 }
 
 .szoveg {
