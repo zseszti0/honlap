@@ -21,6 +21,7 @@
               <a href="javascript:gotoilt()"><img class="dropimg" src="ILTinsight.png" ></a>
               <a href="javascript:gotochess()"><img class="dropimg" src="title.png" ></a>
               <a href="javascript:gotohgen()"><img class="dropimg" src="hgéá.png" ></a>
+              <a href="javascript:gotoCsongi()"><img class="dropimg" src="CSongiDrop.png" ></a>
             </div>
         </div>
         <button onclick="art()" class="dropbtn2">Art gallery★</button>
@@ -67,7 +68,7 @@
                 </p>
             </div>
             <div id="more">
-                <img onclick="window.alert('This site is still under development :C come back later')" style="height: 150px;" src="matsuri.png">
+                <img onclick="window.alert('This site is still under development :C come back later')" style="height: 150px;" src="matsuri.png" class="more">
                 </div>
             </div>
     </div>
@@ -88,7 +89,7 @@
             </div>
             <div id="more2">
                 <a href="chess2/rulez.html">
-                <img style="height: 150px;" src="matsuri.png">
+                <img style="height: 150px;" src="matsuri.png" class="more">
                 </a></div>
 
             </div>
@@ -110,7 +111,28 @@
             </div>
             <div id="more3">
                 <a href="triangle/index.html">
-                <img style="height: 150px;" src="matsuri.png">
+                <img style="height: 150px;" src="matsuri.png" class="more">
+                </a>
+                </div>
+            </div>
+    </div>
+    <div class="ph">
+        <div class="bal">
+            <div style="height:30vh;"><img id="Cslogo" src="CsongiLogo.png"></div>
+            <div class="desc" id="desc4">
+                <p>
+                    Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor Csongor
+                </p>
+                <p>
+                    A game where you roleplay as CSONGI (from the hit osztály 11i) and face many many challanges along the way. Made as a Christmas gift for the one and only Csongi.
+                </p>
+                <p>
+                    Download [I got hit by a BUS and DIED but got RE:incranated az CSONGI grom the hit osztály 11i]
+                </p>
+            </div>
+            <div id="more4">
+                <a href="CsongiGame.rar" download>
+                <img style="height: 150px;" src="matsuri.png" class="more">
                 </a>
                 </div>
             </div>
@@ -122,14 +144,17 @@
         document.querySelector('#iltlogo').style.display = 'none';
         document.querySelector('#hgenlogo').style.display = 'none';
         document.querySelector('#chesslogo').style.display = 'none';
+        document.querySelector('#Cslogo').style.display = 'none';
 
         document.querySelector('#desc1').style.display = 'none';
         document.querySelector('#desc2').style.display = 'none';
         document.querySelector('#desc3').style.display = 'none';
+        document.querySelector('#desc4').style.display = 'none';
  
         document.querySelector('#more').style.display = 'none';
         document.querySelector('#more2').style.display = 'none';
         document.querySelector('#more3').style.display = 'none';
+        document.querySelector('#more4').style.display = 'none';
 
 
         window.addEventListener("scroll", function() {
@@ -158,6 +183,14 @@
             }
         }
         )
+        window.addEventListener("scroll", function() {
+            if(this.pageYOffset > 2930) {
+                document.querySelector('#Cslogo').style.display = 'block';
+                document.querySelector('#desc4').style.display = 'block';
+                document.querySelector('#more4').style.display = 'block';
+            }
+        }
+        )
 
         function gotoilt()
         {
@@ -170,6 +203,10 @@
         function gotohgen()
         {
             window.scrollTo(0, 2705);
+        }
+        function gotoCsongi()
+        {
+            window.scrollTo(0, 3505);
         }
 
         function art()
